@@ -11,6 +11,8 @@
 		9D4019292C737C9700D2EC04 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4019282C737C9700D2EC04 /* ContentView.swift */; };
 		9D40192B2C737C9800D2EC04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D40192A2C737C9800D2EC04 /* Assets.xcassets */; };
 		9D40192F2C737C9800D2EC04 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D40192E2C737C9800D2EC04 /* Preview Assets.xcassets */; };
+		9D4019372C737D2C00D2EC04 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 9D4019362C737D2C00D2EC04 /* SocketIO */; };
+		9D4019392C737D4E00D2EC04 /* RTCManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4019382C737D4E00D2EC04 /* RTCManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		9D40192A2C737C9800D2EC04 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D40192C2C737C9800D2EC04 /* socket_io_ios_app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = socket_io_ios_app.entitlements; sourceTree = "<group>"; };
 		9D40192E2C737C9800D2EC04 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9D4019382C737D4E00D2EC04 /* RTCManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTCManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D4019372C737D2C00D2EC04 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +61,7 @@
 				9D40192A2C737C9800D2EC04 /* Assets.xcassets */,
 				9D40192C2C737C9800D2EC04 /* socket_io_ios_app.entitlements */,
 				9D40192D2C737C9800D2EC04 /* Preview Content */,
+				9D4019382C737D4E00D2EC04 /* RTCManager.swift */,
 			);
 			path = "socket-io-ios-app";
 			sourceTree = "<group>";
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = "socket-io-ios-app";
+			packageProductDependencies = (
+				9D4019362C737D2C00D2EC04 /* SocketIO */,
+			);
 			productName = "socket-io-ios-app";
 			productReference = 9D4019232C737C9700D2EC04 /* socket-io-ios-app.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 9D40191A2C737C9600D2EC04;
+			packageReferences = (
+				9D4019352C737D2C00D2EC04 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 9D4019242C737C9700D2EC04 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4019292C737C9700D2EC04 /* ContentView.swift in Sources */,
+				9D4019392C737D4E00D2EC04 /* RTCManager.swift in Sources */,
 				9D4019272C737C9700D2EC04 /* socket_io_ios_appApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +371,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9D4019352C737D2C00D2EC04 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				kind = exactVersion;
+				version = 16.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9D4019362C737D2C00D2EC04 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9D4019352C737D2C00D2EC04 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D40191B2C737C9600D2EC04 /* Project object */;
 }
