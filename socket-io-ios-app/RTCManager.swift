@@ -10,12 +10,15 @@ import SocketIO
 
 class RTCManager {
     static let shared = RTCManager()
+
+    // Change this to your backend URL
+    private let serverURLAndPort = "http://localhost:3000"
     
     private var manager: SocketManager
     var socket: SocketIOClient
-    
+
     private init() {
-        let socketURL = URL(string: "http://192.168.50.221:3000")!
+        let socketURL = URL(string: serverURLAndPort)!
         manager = SocketManager(socketURL: socketURL, config: [.log(true), .compress])
         socket = manager.defaultSocket
         
